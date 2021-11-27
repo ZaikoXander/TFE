@@ -1,0 +1,2 @@
+O projeto TFE é um programa que deleta itens temporários de seu Windows.
+Não me responsabilizo por qualquer dano/exclusão de arquivos pessoais, o código funcionou para MIM e não tive a oportunidade de testes em outras máquinas.
