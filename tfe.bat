@@ -18,13 +18,17 @@ title Temp Folders Eraser  0*/.
 del /f /s /q %temp%
 title Temp Folders Eraser  25*/.
 echo.
-del /f /s /q %userprofile%\AppData\LocalLow\Temp
+cd %userprofile%
+del /f /s /q AppData\LocalLow\Temp
 title Temp Folders Eraser  50*/.
 echo.
-del /f /s /q C:\Windows\Temp
+cd ..
+cd ..
+cd Windows
+del /f /s /q Temp
 title Temp Folders Eraser  75*/.
 echo.
-del /f /s /q C:\Windows\Prefetch
+del /f /s /q Prefetch
 title Temp Folders Eraser  100*/.
 echo.
 echo.
