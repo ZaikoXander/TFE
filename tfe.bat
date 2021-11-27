@@ -14,22 +14,34 @@ echo.
 pause
 cls
 echo.
-title Temp Folders Eraser  0*/.
-del /f /s /q %temp%
-title Temp Folders Eraser  25*/.
+title Temp Folders Eraser  0'/.
+del /f /s /q %temp% >nul 2>&1
+for /d %%p in (%temp%\*.*) do rmdir "%%p" /s /q
+timeout 2
+cls
+title Temp Folders Eraser  25'/.
 echo.
 cd %userprofile%
-del /f /s /q AppData\LocalLow\Temp
-title Temp Folders Eraser  50*/.
+del /f /s /q AppData\LocalLow\Temp >nul 2>&1
+for /d %%p in (%cd%\AppData\LocalLow\Temp\*.*) do rmdir "%%p" /s /q
+timeout 2
+cls
+title Temp Folders Eraser  50'/.
 echo.
 cd ..
 cd ..
 cd Windows
-del /f /s /q Temp
-title Temp Folders Eraser  75*/.
+del /f /s /q Temp >nul 2>&1
+for /d %%p in (%cd%\Temp\*.*) do rmdir "%%p" /s /q
+timeout 2
+cls
+title Temp Folders Eraser  75'/.
 echo.
-del /f /s /q Prefetch
-title Temp Folders Eraser  100*/.
+del /f /s /q Prefetch >nul 2>&1
+for /d %%p in (%cd%\Prefetch\*.*) do rmdir "%%p" /s /q
+timeout 2
+cls
+title Temp Folders Eraser  100'/.
 echo.
 echo.
 echo.
